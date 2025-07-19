@@ -17,8 +17,6 @@ destino = ox.distance.nearest_nodes(G, -51.0923, 0.0521)   # Coordenadas aproxim
 # Calcula o caminho mais curto com Dijkstra
 caminho = nx.shortest_path(G, origem, destino, weight="length")  # "length" = distância em metros
 
-import folium
-
 # Extrai coordenadas do caminho
 coordenadas = [(G.nodes[n]["y"], G.nodes[n]["x"]) for n in caminho]
 
